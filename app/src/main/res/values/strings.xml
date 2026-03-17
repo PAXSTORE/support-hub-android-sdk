@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">paxstore-3rd-app-android-support-hub-sdk</string>
+
+
+    <string name="dialog_title_filter">Filter</string>
+    <string name="time_period">Time Period</string>
+    <string name="dialog_start_time">Start Time</string>
+    <string name="dialog_end_time">End Time</string>
+    <string name="detail_status">Status</string>
+
+    <string name="btn_confirm">CONFIRM</string>
+    <string name="btn_cancel">RESET</string>
+
+    <string name="status_select_all">All</string>
+    <string name="status_select_open">Open</string>
+    <string name="status_select_processing">In Progress</string>
+    <string name="status_select_hold">On hold</string>
+    <string name="status_select_close">Closed</string>
+
+    <string name="issue_title">Issue Title</string>
+    <string name="title_is_invalid_err">Issue Title is mandatory</string>
+    <string name="issue_title_hint">Please enter the content</string>
+    <string name="issue_describe">Issue Describe</string>
+    <string name="describe_is_invalid_err">Issue Description is mandatory</string>
+    <string name="issue_describe_hint">Describe the issue (e.g., \'Printer not working, Error Code 05\'）</string>
+    <string name="attach_photo_tips_count">Attach up to %1$d / 5 photos</string>
+    <string name="attach_photo_tips">(PNG, JPG, JPEG, under 5MB each)</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="your_name_hint">Your Name</string>
+    <string name="e_mail_address__hint">E-mail Address</string>
+    <string name="email_is_invalid_err">Email is invalid</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="phone_number_is_invalid_err">Phone Number is invalid</string>
+    <string name="checkbox_tips">I authorize this device to upload diagnostic logs to Support Hub\'s server to help investigate this issue.</string>
+    <string name="report_btn">REPORT</string>
+    <string name="retry_btn">RETRY</string>
+    <string name="attach_photos">Attach Photos</string>
+</resources>

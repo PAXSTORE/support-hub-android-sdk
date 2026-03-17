@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_filter_shape"
+    tools:ignore="ContentDescription">
+
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/dialog_title_filter"
+            android:textColor="#FF333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/icon_close"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/close" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Status 区域 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/detail_status"
+                android:textSize="13sp"
+                android:textColor="#73000000" />
+
+                <LinearLayout
+                    android:id="@+id/llTagGroup"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            <!-- Time Period 区域 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_period"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="#73000000" />
+
+            <LinearLayout
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp">
+
+                <TextView
+                    android:id="@+id/time_start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/bg_date_select"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/dialog_start_time"
+                    android:textColor="#5E000000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#73000000"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/time_end"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/bg_date_select"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/dialog_end_time"
+                    android:textColor="#5E000000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- 底部按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp">
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="44dp"
+                    android:background="@drawable/white_btn_background"
+                    android:textColor="#D9000000"
+                    android:textSize="15sp"
+                    android:text="@string/btn_cancel" />
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/blue_btn_background"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:text="@string/btn_confirm" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 如果需要在后台访问网络，可能需要添加 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <application
+        android:name=".BaseApplication"
+        android:icon="@mipmap/support_sdk_demo_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/support_sdk_demo_icon"
+        android:theme="@style/Theme.Paxstore3rdappandroidsupporthubsdk">
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ReportTicketActivity"
+            android:exported="false" />
+
+        <meta-data android:name="PAXVAS_SupportHub"
+            android:value="true"/>
+    </application>
+
+</manifest>
