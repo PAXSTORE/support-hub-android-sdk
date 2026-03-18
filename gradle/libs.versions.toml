@@ -9,7 +9,7 @@ appcompat = "1.7.1"
 material = "1.13.0"
 okhttp = "4.12.0"
 paxstoreAndroidSdk = "10.1.0.1427-SNAPSHOT"
-supportHubSdk = "10.1.0.03171037-SNAPSHOT"
+supportHubSdk = "10.1.0.03171450-SNAPSHOT"
 slf4jAndroid = "1.7.25"
 
 [libraries]

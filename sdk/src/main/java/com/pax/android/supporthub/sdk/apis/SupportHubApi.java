@@ -127,7 +127,7 @@ public class SupportHubApi extends BaseApi {
      * @return {@link PageInfoDto <HistoryTicketDto>}
      */
     public PageInfoDto<HistoryTicketDto> getHistoryTicketList(String search, String status, Long startTime,
-                                                              Long endTime, int startOffset, int limit, String order) {
+                                                              Long endTime, int startOffset, int limit) {
         SdkRequest request = new SdkRequest(getHistoryTicketListUrl);
         request.setRequestMethod(SdkRequest.RequestMethod.GET);
         request.addHeader(CommonApiConstants.HEADER_Language, String.valueOf(Locale.getDefault()));
@@ -139,7 +139,6 @@ public class SupportHubApi extends BaseApi {
         request.addRequestParam(CommonApiConstants.PARAM_END_TIME, endTime == null ? "" : String.valueOf(endTime));
         request.addRequestParam(CommonApiConstants.PARAM_START_OFFSET, String.valueOf(startOffset));
         request.addRequestParam(CommonApiConstants.PARAM_LIMIT, String.valueOf(limit));
-        request.addRequestParam(CommonApiConstants.PARAM_ORDER, order);
         return JsonUtils.fromJson(call(request), PageInfoDto.class, HistoryTicketDto.class);
 
     }

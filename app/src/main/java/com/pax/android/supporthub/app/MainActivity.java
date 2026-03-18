@@ -111,8 +111,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialog.OnSt
 
                 PageInfoDto<HistoryTicketDto> detailInfo = SupportHubSdk.getInstance().supportHubApi().getHistoryTicketList
                         (searchContent.getText().toString(), getSearchStatus(filterDialog.getSelectedStatus()), start,end,
-                                Integer.parseInt(edStartOffset.getText().toString()),
-                                Integer.parseInt(edLimit.getText().toString()), null);
+                                Integer.parseInt(edStartOffset.getText().toString()), Integer.parseInt(edLimit.getText().toString()));
                 runOnUiThread(() -> {
                     if (detailInfo.getBusinessCode() != 0) {
                         tvResult.setText(detailInfo.getMessage());
