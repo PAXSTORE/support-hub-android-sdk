@@ -9,7 +9,6 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -143,7 +142,7 @@ public class ReportTicketActivity extends AppCompatActivity {
         Thread thread =  new Thread(() -> {
             try {
                 Log.w(TAG,"calling uploadTicket api ... compress: " + isCompress);
-                tvResult.setText("calling uploadTicket api ... compress: " + isCompress);
+                runOnUiThread(() ->tvResult.setText("calling uploadTicket api ... compress: " + isCompress));
                 TicketNumberDto ticketNumberDto = SupportHubSdk.getInstance().supportHubApi().uploadTicket(dto, getImageFile(selectedImageUris), this, isCompress);
                 runOnUiThread(() -> {
                     if (ticketNumberDto.getBusinessCode() != 0) {
@@ -155,7 +154,7 @@ public class ReportTicketActivity extends AppCompatActivity {
                     }
                 });
             } catch (Exception e) {
-                runOnUiThread(() -> tvResult.setText("callGetPhoneApi err: " + e.getMessage()));
+                runOnUiThread(() -> tvResult.setText("uploadTicket err: " + e.getMessage()));
             }
         });
         thread.start();

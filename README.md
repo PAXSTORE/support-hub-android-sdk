@@ -1,4 +1,6 @@
 # PAXSTORE 3rd App Android Support Hub SDK
+Please check below mirgrations.
+https://github.com/PAXSTORE/paxstore-3rd-app-android-sdk/blob/master/docs/Migrations.md
 
 This is the extention for the android sdk, which includes some special features that not exist in Android Sdk. The services currently include the following features:
 1. [SupportHub Tickets](docs/SupportHubApi.md)

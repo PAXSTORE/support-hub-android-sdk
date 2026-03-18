@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialog.OnSt
     private void callGetPhoneApi() {
         Thread thread =  new Thread(() -> {
             try {
-                tvResult.setText("calling getSupportPhone api ...");
+                runOnUiThread(() -> tvResult.setText("calling getSupportPhone api ..."));
                 SupportPhoneDto phone = SupportHubSdk.getInstance().supportHubApi().getSupportPhone();
                 runOnUiThread(() -> {
                     if (phone.getBusinessCode() != 0) {
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialog.OnSt
     private void callGetHistoryTicketListApi() {
         new Thread(() -> {
             try {
-                tvResult.setText("calling getHistoryTicketList api ...");
+                runOnUiThread(() -> tvResult.setText("calling getHistoryTicketList api ..."));
                 Long start = DateUtil.getTimeStamp(TextUtils.isEmpty(filterDialog.getStartTime()) ? filterDialog.getEndTime() : filterDialog.getStartTime());
                 start = (start == null) ? null : start + 1000L;
                 Long end = DateUtil.getTimeStamp(TextUtils.isEmpty(filterDialog.getEndTime()) ? filterDialog.getStartTime() : filterDialog.getEndTime());
@@ -144,7 +144,8 @@ public class MainActivity extends AppCompatActivity implements FilterDialog.OnSt
     }
 
     private void callGetTicketDetailApi() {
-        new Thread(() -> {
+        runOnUiThread(() -> tvResult.setText("calling GetTicketDetail api ..."));
+                new Thread(() -> {
             try {
                 SupportHubTicketDetailInfo detailInfo = SupportHubSdk.getInstance().supportHubApi().getTicketDetail(Long.valueOf(edTicketId.getText().toString()));
                 runOnUiThread(() -> tvResult.setText(detailInfo.toString()));
