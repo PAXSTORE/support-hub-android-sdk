@@ -71,7 +71,7 @@ public TicketNumberDto uploadTicket(UploadTicketDto uploadTicketDto, List<File> 
 | Parameter       | Type            | Description                                                  |
 | --------------- | --------------- | ------------------------------------------------------------ |
 | uploadTicketDto | UploadTicketDto | UploadTicket dto                                             |
-| imageFile       | List<File>      | Send attached images to the ticket                           |
+| imageFile       | List<File>      | Send attached images to the ticket -- Images should not be too large. If they exceed 5MB, they must be compressed. The API only supports single images up to 5MB in size. |
 | context         | Context         | Android context                                              |
 | needCompress    | boolean         | Do the attached images on the work order need to be compressed? |
 

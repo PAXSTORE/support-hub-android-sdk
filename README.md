@@ -1,7 +1,7 @@
-# PAXSTORE 3rd App Android Support Hub SDK
+# Support Hub Android SDK
 
 
-### Before integrating Support Hub SDK, you need to integrate Android SDK first. Below is the integrated address.
+### Before integrating Support Hub Android SDK, you need to integrate Android SDK first. Below is the integrated address.
 
 https://github.com/PAXSTORE/paxstore-3rd-app-android-sdk?tab=readme-ov-file#set-up
 
@@ -18,7 +18,7 @@ This is the extention for the android sdk, which includes some special features 
 >Gradle version 8.11.1 or higher  
 >Gradle plugin version 8.9+ or higher
 
-**PAXSTORE Android Sdk needed**
+**Support Hub Android SDK needed**
 
 Add the dependency
 
@@ -28,7 +28,7 @@ Add the dependency
 ```
 
 ## Permissions
-PAXSTORE Android SDK need the following permissions, please add them in AndroidManifest.xml.
+Support Hub Android SDK need the following permissions, please add them in AndroidManifest.xml.
 
 `<uses-permission android:name="android.permission.INTERNET" />`<br>
 
