@@ -47,7 +47,6 @@ public class SupportHubSdk extends StoreSdk {
         if (supportHubApi == null) {
             supportHubApi = new SupportHubApi(url, appKey, appSecret, terminalSn);
         }
-        supportHubApi.setBaseUrl(getDcUrl(context, supportHubApi.getBaseUrl(), true));
         supportHubApi.setProxyDelegate(BaseApiService.getInstance(context));
         return supportHubApi;
     }

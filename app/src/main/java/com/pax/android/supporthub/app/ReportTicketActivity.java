@@ -107,6 +107,13 @@ public class ReportTicketActivity extends AppCompatActivity {
 
 
     private void initClickMethod() {
+        swCompress.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                isCompress = isChecked;
+            }
+        });
+
         imageAdapter.setOnAddButtonClickListener(this::openImagePicker);
 
         imageAdapter.setOnRemoveButtonClickListener(this::removePhoto);
@@ -133,12 +140,7 @@ public class ReportTicketActivity extends AppCompatActivity {
         dto.setEmail(email);
         dto.setPhone(phone);
         dto.setContactName(contactName);
-        swCompress.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                isCompress = isChecked;
-            }
-        });
+
         Thread thread =  new Thread(() -> {
             try {
                 Log.w(TAG,"calling uploadTicket api ... compress: " + isCompress);
