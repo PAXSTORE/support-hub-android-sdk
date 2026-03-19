@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements FilterDialog.OnSt
                 Long start = DateUtil.getTimeStamp(TextUtils.isEmpty(filterDialog.getStartTime()) ? filterDialog.getEndTime() : filterDialog.getStartTime());
                 start = (start == null) ? null : start + 1000L;
                 Long end = DateUtil.getTimeStamp(TextUtils.isEmpty(filterDialog.getEndTime()) ? filterDialog.getStartTime() : filterDialog.getEndTime());
-
+                end = (end == null) ? null : end + (23 * 3600 + 59 * 60 + 59) * 1000L;
                 PageInfoDto<HistoryTicketDto> detailInfo = SupportHubSdk.getInstance().supportHubApi().getHistoryTicketList
                         (searchContent.getText().toString(), getSearchStatus(filterDialog.getSelectedStatus()), start,end,
                                 Integer.parseInt(edStartOffset.getText().toString()), Integer.parseInt(edLimit.getText().toString()));
