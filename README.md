@@ -14,7 +14,7 @@ This is the extention for the android sdk, which includes some special features 
 **Android SDK version**
 >SDK 21 or higher, depending on the terminal's paydroid version.
 
-**Gradle's and Gradle plugin's version**
+**Gradle's and Gradle plugin's version advice**
 >Gradle version 8.11.1 or higher  
 >Gradle plugin version 8.9+ or higher
 
@@ -24,7 +24,7 @@ Add the dependency
 
 ```
     implementation 'com.whatspos.sdk:paxstore-3rd-app-android-sdk:10.1.0'
-    implementation 'com.whatspos.sdk:paxstore-3rd-app-android-sdk-ext:10.1.0'
+    implementation 'com.whatspos.sdk:support-hub-android-sdk:10.1.0'
 ```
 
 ## Permissions
