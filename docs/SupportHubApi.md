@@ -118,7 +118,7 @@ public PageInfoDto<HistoryTicketDto> getHistoryTicketList(String search, String 
 | Parameter   | Type   | Description                                                  |
 | ----------- | ------ | ------------------------------------------------------------ |
 | search      | String | Search keyword (id、ticket number 、title and  description)  |
-| status      | String | Ticket status filter: **O** (Open), **I** (In Progress), **H** (On Hold), **C** (Closed); pass null or empty string for all statuses |
+| status      | String | Ticket status filter: **O** (Open), **I** (In Progress), **H** (On Hold), **C** (Closed); <br />pass null or empty string for all statuses |
 | startTime   | Long   | Filter by creation start time (Unix timestamp in milliseconds) |
 | endTime     | Long   | Filter by creation end time (Unix timestamp in milliseconds) |
 | startOffset | int    | Pagination start offset (0-based)                            |
@@ -190,7 +190,7 @@ public SupportHubTicketDetailInfo getTicketDetail(Long ticketId)
 | newPriority       | String       | New priority                                                 |
 | oldAssignee       | UserInfo     | Previous assignee                                            |
 | newAssignee       | UserInfo     | New assignee                                                 |
-| actionType        | int          | Action type: **1** Create, **2** Edit, **3** Assign, **4** Status, **5** Priority, **6** Comment, **7** Attachment, **8** Upgrade |
+| actionType        | int          | Action type: **1**- Create, **2** - Edit, **3** - Assign, **4** - Status, **5** - Priority, **6** - Comment, **7** - Attachment, **8** - Upgrade |
 | content           | String       | Content: title, edit field, new ticket number, or comment content |
 | userInfo          | UserInfo     | Operator user info                                           |
 | screenshotFileIds | List<String> | Attached screenshot url list                                 |

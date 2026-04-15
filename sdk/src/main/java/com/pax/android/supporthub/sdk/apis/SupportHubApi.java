@@ -1,8 +1,6 @@
 package com.pax.android.supporthub.sdk.apis;
 
 import android.content.Context;
-import android.util.Log;
-
 
 import com.pax.android.supporthub.sdk.apis.constant.CommonApiConstants;
 import com.pax.android.supporthub.sdk.apis.constant.CommonConstants;
@@ -105,7 +103,6 @@ public class SupportHubApi extends BaseApi {
      * @return {@link SupportPhoneDto}
      */
     public SupportPhoneDto getSupportPhone() {
-        Log.w("TAG", "api thread: " + Thread.currentThread().getName());
         SdkRequest request = new SdkRequest(getSupportPhoneUrl);
         request.addHeader(CommonApiConstants.HEADER_Language, String.valueOf(Locale.getDefault()));
         request.setRequestMethod(SdkRequest.RequestMethod.GET);
