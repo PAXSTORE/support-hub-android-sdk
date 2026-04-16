@@ -23,8 +23,8 @@ This is the extention for the android sdk, which includes some special features 
 Add the dependency
 
 ```
-    implementation 'com.whatspos.sdk:paxstore-3rd-app-android-sdk:10.1.0'
-    implementation 'com.whatspos.sdk:support-hub-android-sdk:10.1.0'
+    implementation 'com.whatspos.sdk:paxstore-3rd-app-android-sdk:10.0.3'
+    implementation 'com.whatspos.sdk:support-hub-android-sdk:10.0.3'
 ```
 
 ## Permissions
