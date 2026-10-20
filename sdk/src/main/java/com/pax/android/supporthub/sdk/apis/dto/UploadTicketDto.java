@@ -14,7 +14,10 @@ public class UploadTicketDto {
     private String email;
     @Expose @SerializedName("phone")
     private String phone;
-
+    @Expose @SerializedName("incidentStartTime")
+    private Long incidentStartTime;
+    @Expose @SerializedName("incidentEndTime")
+    private Long incidentEndTime;
     public String getIssueTitle() {
         return issueTitle;
     }
@@ -55,6 +58,18 @@ public class UploadTicketDto {
         this.phone = phone;
     }
 
+    public Long getIncidentStartTime() {
+        return incidentStartTime;
+    }
+    public void setIncidentStartTime(Long incidentStartTime) {
+        this.incidentStartTime = incidentStartTime;
+    }
+    public Long getIncidentEndTime() {
+        return incidentEndTime;
+    }
+    public void setIncidentEndTime(Long incidentEndTime) {
+        this.incidentEndTime = incidentEndTime;
+    }
     @Override
     public String toString() {
         return "UploadTicketDto{" +
@@ -63,6 +78,8 @@ public class UploadTicketDto {
                 ", contactName='" + contactName + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", incidentStartTime=" + incidentStartTime +
+                ", incidentEndTime=" + incidentEndTime +
                 '}';
     }
 }

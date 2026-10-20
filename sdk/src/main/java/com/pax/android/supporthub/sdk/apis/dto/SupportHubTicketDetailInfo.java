@@ -19,6 +19,10 @@ public class SupportHubTicketDetailInfo extends SdkObject {
     private Long updatedDate;
     @Expose @SerializedName("status")
     private String status;
+    @Expose @SerializedName("incidentStartTime")
+    private Long incidentStartTime;
+    @Expose @SerializedName("incidentEndTime")
+    private Long incidentEndTime;
     @Expose @SerializedName("ticketNumber")
     private String ticketNumber;
     @Expose @SerializedName("issueTitle")
@@ -90,6 +94,22 @@ public class SupportHubTicketDetailInfo extends SdkObject {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Long getIncidentStartTime() {
+        return incidentStartTime;
+    }
+
+    public void setIncidentStartTime(Long incidentStartTime) {
+        this.incidentStartTime = incidentStartTime;
+    }
+
+    public Long getIncidentEndTime() {
+        return incidentEndTime;
+    }
+
+    public void setIncidentEndTime(Long incidentEndTime) {
+        this.incidentEndTime = incidentEndTime;
     }
 
     public String getTicketNumber() {
@@ -197,6 +217,8 @@ public class SupportHubTicketDetailInfo extends SdkObject {
                 ", createdDate=" + createdDate +
                 ", updatedDate=" + updatedDate +
                 ", status='" + status + '\'' +
+                ", incidentStartTime=" + incidentStartTime +
+                ", incidentEndTime=" + incidentEndTime +
                 ", ticketNumber='" + ticketNumber + '\'' +
                 ", issueTitle='" + issueTitle + '\'' +
                 ", issueDescription='" + issueDescription + '\'' +

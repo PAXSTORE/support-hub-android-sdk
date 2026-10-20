@@ -77,13 +77,15 @@ public TicketNumberDto uploadTicket(UploadTicketDto uploadTicketDto, List<File> 
 
 **com.pax.android.supporthub.sdk.apis.dto.UploadTicketDto**
 
-| Property         | Type   | Description                 |
-| ---------------- | ------ | --------------------------- |
-| issueTitle       | String | Ticket issue title          |
-| issueDescription | String | Ticket issue describe       |
-| contactName      | String | Ticket contact person name  |
-| email            | String | Ticket E-mail address       |
-| phone            | String | Ticket contact phone number |
+| Property          | Type   | Description                               |
+| ----------------- | ------ | ----------------------------------------- |
+| issueTitle        | String | Ticket issue title                        |
+| issueDescription  | String | Ticket issue describe                     |
+| contactName       | String | Ticket contact person name                |
+| email             | String | Ticket E-mail address                     |
+| phone             | String | Ticket contact phone number               |
+| incidentStartTime | Long   | The start time of the incident occurrence |
+| incidentEndTime   | Long   | The end time of the incident occurrence   |
 
 
 
